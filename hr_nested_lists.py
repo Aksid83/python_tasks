@@ -20,3 +20,5 @@ if there are multiple students, order their names alphabetically and print each 
 n = int(raw_input())
 students = [[raw_input(), float(raw_input())] for _ in range(n)]
 
+second_highest = sorted(list(set([mark for name, mark in students])))[1]
+print '\n'.join([name for name, mark in sorted(students) if mark == second_highest])
